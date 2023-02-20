@@ -16,10 +16,10 @@ var PayPalLink  =   "https://www.paypal.me/LY1806620741";
 $('#paypal-donate>a').href = PayPalLink;
 $('#github-box>a').href = GithubLink;
 var qrcodes = {
-    'btc_donate'	:	'../simple/images/BTCQR.png',	// 二维码路径
-    'alipay_donate'	:	'../simple/images/alipayQR.png',	// 支付宝二维码
+    'btc_donate'	:	'../simple/images/BTCQR.jpg',	// 二维码路径
+    'alipay_donate'	:	'../simple/images/alipayQR.jpg',	// 支付宝二维码
     'alipay_donate_link'   :   'https://qr.alipay.com/fkx13146nilwnp0kkuvos18',
-    'wechat_donate'	:	'../simple/images/wechatQR.png'
+    'wechat_donate'	:	'../simple/images/wechatQR.jpg'
 };
 
 var drinks_an = new Object();
