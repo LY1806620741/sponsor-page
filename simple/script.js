@@ -1,9 +1,9 @@
 jQuery(document).ready(function() {
 	var QRBox	=	$('#QRBox');
 	var MainBox	=	$('#MainBox');
-	var BTCQR	=	'images/BTCQR.png';	// 二维码路径
+	var BTCQR	=	'images/BTCQR.jpg';	// 二维码路径
 	var AliPayQR	=	'images/alipayQR.jpg';
-	var WeChanQR	=	'images/weChatQR.jpg';
+	var WeChanQR	=	'images/wechatQR.jpg';
 
 	
 
