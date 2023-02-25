@@ -1,5 +1,5 @@
 var CACHE_NAME = 'sponsor-offline-v1.0.0';
-const OFFLINE_URL = './'
+const OFFLINE_URL = './';
 
 
 self.addEventListener('install', function (event) {
@@ -8,7 +8,17 @@ self.addEventListener('install', function (event) {
         const cache = await caches.open(CACHE_NAME);
         // Setting {cache: 'reload'} in the new request will ensure that the response
         // isn't fulfilled from the HTTP cache; i.e., it will be from the networks.
-        await cache.add(new Request(OFFLINE_URL, { cache: 'reload' }));
+        await cache.addAll([
+            './',
+            './script.js',
+            './style.css',
+            './images/coffee.png',
+            './manifest.json',
+            '../static/jquery.min.js',
+            '../simple/images/BTCQR.jpg',
+            '../simple/images/alipayQR.jpg',
+            '../simple/images/wechatQR.jpg'
+        ]);
     })());
 
     self.skipWaiting();
@@ -55,10 +65,18 @@ self.addEventListener('fetch', function (event) {
                     return preloadResponse;
                 }
 
-                const networkResponse = await fetch(event.request);
+                const networkResponse = await fetch(event.request).then(response=>{
+                    if (response.ok && event.request.url.indexOf('http') === 0){
+                        caches.open(CACHE_NAME).then(cache=>{
+                            // cache.put(event.request, response.clone());
+                            cache.add(event.request.url);
+                            // console.log('[Service Worker] Cache ',event.request.url);
+                        });
+                    }
+                });
                 return networkResponse;
             } catch (error) {
-                console.log('[Service Worker] Fetch failed; returning offline page instead.', error);
+                console.log('[Service Worker] Fetch ',event.request.url,' failed; returning offline page instead.', error);
 
                 const cache = await caches.open(CACHE_NAME);
                 const cacheResponse = await cache.match(OFFLINE_URL);
