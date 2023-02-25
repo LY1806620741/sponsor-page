@@ -86,9 +86,3 @@ if('serviceWorker' in navigator) {
     .register('./service-worker.js')
     .then(() => { console.log('Service Worker Registered'); });
 };
-
-// The prompt() method must be called with a user gesture 必须用户触发
-// window.addEventListener('beforeinstallprompt', e => {
-//     e.preventDefault();
-//     e.prompt();
-// });
