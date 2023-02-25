@@ -80,3 +80,9 @@ donate_button.on('click',function(){
 drinks_qrcode.on('click',drinks_an[3]); // 隐藏二维码
 //
 })
+
+if('serviceWorker' in navigator) {
+    navigator.serviceWorker
+    .register('./service-worker.js')
+    .then(() => { console.log('Service Worker Registered'); });
+};
