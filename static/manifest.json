@@ -1,0 +1,21 @@
+{
+    "name": "Sponsor Panel",
+    "short_name": "Sponsor",
+    "description": "Encourage Liuying to have more time to develop interesting things",
+    "icons": [
+      {
+        "src": "../drinks/images/coffee.png",
+        "sizes": "128x128",
+        "type": "image/png"
+      },
+      {
+        "src": "coffee.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "./",
+    "display": "standalone",
+    "background_color": "#9E9E9E",
+    "theme_color": "#9E9E9E"
+  }

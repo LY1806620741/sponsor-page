@@ -80,3 +80,15 @@ donate_button.on('click',function(){
 drinks_qrcode.on('click',drinks_an[3]); // 隐藏二维码
 //
 })
+
+if('serviceWorker' in navigator) {
+    navigator.serviceWorker
+    .register('../static/service-worker.js')
+    .then(() => { console.log('Service Worker Registered'); });
+};
+
+// The prompt() method must be called with a user gesture 必须用户触发
+// window.addEventListener('beforeinstallprompt', e => {
+//     e.preventDefault();
+//     e.prompt();
+// });
