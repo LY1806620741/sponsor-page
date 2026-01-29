@@ -17,6 +17,7 @@ $('#paypal-donate>a').href = PayPalLink;
 $('#github-box>a').href = GithubLink;
 var qrcodes = {
     'btc_donate'	:	'../simple/images/BTCQR.jpg',	// 二维码路径
+    'bn_donate'     :   '../simple/images/qr-image-1769690369398.png', //币安
     'alipay_donate'	:	'../simple/images/alipayQR.jpg',	// 支付宝二维码
     'alipay_donate_link'   :   'https://qr.alipay.com/fkx13146nilwnp0kkuvos18',
     'wechat_donate'	:	'../simple/images/wechatQR.jpg'

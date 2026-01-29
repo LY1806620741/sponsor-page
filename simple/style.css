@@ -108,6 +108,10 @@ a{
 	opacity: 0;
 	cursor: pointer;
 }
+#donateBox #Binance {
+	background-image: url(images/Binance-Logo.wine.svg);
+	background-size: 120%;
+}
 #donateBox #AliPay {
 	background-image: url(images/alipay.svg);
 }
@@ -141,6 +145,14 @@ a{
     overflow: hidden;
 }
 #btc-key {
+	opacity: 0;
+	width: 2px;
+	height: 8px;
+	overflow: hidden;
+	left: -2px;
+	top: -8px;
+}
+#bn-key {
 	opacity: 0;
 	width: 2px;
 	height: 8px;
